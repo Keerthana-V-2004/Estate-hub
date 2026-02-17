@@ -19,6 +19,6 @@ const userSchema = new mongoose.Schema({
 
 },{timestamps:true}); //User login time and logout time is recorded
 
-const User = mongoose.model('User',userSchema);
+const User = mongoose.model('User',userSchema); //Name 'User' should be singular mongo convert it to plural
 
 export default User;
