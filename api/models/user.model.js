@@ -15,9 +15,15 @@ const userSchema = new mongoose.Schema({
     type : String,
     required:true,
     
+  },
+  avatar: {
+    type: String,
+    default: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+  },
   }
+  
 
-},{timestamps:true}); //User login time and logout time is recorded
+,{timestamps:true}); //User login time and logout time is recorded
 
 const User = mongoose.model('User',userSchema); //Name 'User' should be singular mongo convert it to plural
 
