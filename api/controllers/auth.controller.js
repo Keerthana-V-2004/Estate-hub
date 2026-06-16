@@ -2,7 +2,7 @@ import User from "../models/user.model.js";
 import bcryptjs from 'bcryptjs';
 import { errorHandler } from "../utils/error.js";
 import jwt from 'jsonwebtoken';
-
+ 
 export const signup = async (req, res, next) => {
   const {username, email, password} = req.body;
 
@@ -66,6 +66,7 @@ export const google = async (req, res, next) => {
       .json(rest);
     }
   } catch (err) {
+    console.log("Google auth error:",err);
     next(err);
   }   
 };
